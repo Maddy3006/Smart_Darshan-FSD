@@ -1,0 +1,116 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Marcellus', Georgia, 'Times New Roman', serif;
+
+  /* Saffron: primary brand colour */
+  --color-saffron-50: #fff6ed;
+  --color-saffron-100: #ffead3;
+  --color-saffron-200: #fed1a7;
+  --color-saffron-300: #fdb070;
+  --color-saffron-400: #fb8537;
+  --color-saffron-500: #f26511;
+  --color-saffron-600: #d94c08;
+  --color-saffron-700: #c2410c;
+  --color-saffron-800: #9a3412;
+  --color-saffron-900: #7c2d12;
+
+  /* Temple brown: ink and dark surfaces */
+  --color-temple-50: #fbf8f4;
+  --color-temple-100: #f3ece3;
+  --color-temple-200: #e6dacb;
+  --color-temple-300: #cdbba6;
+  --color-temple-400: #a8917a;
+  --color-temple-500: #85705c;
+  --color-temple-600: #6b5746;
+  --color-temple-700: #564537;
+  --color-temple-800: #3f3228;
+  --color-temple-900: #2b211a;
+  --color-temple-950: #1a130e;
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-temple-50 font-sans text-temple-900 antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display tracking-tight;
+  }
+  button {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
+  }
+}
+
+@layer components {
+  .input {
+    @apply w-full rounded-lg border border-temple-200 bg-white px-3 py-2 text-sm text-temple-900 shadow-xs outline-none transition placeholder:text-temple-400 focus:border-saffron-500 focus:ring-3 focus:ring-saffron-100 disabled:bg-temple-100;
+  }
+  .card {
+    @apply rounded-2xl border border-temple-200/80 bg-white shadow-xs;
+  }
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Scrolling announcement ticker on the display board */
+@keyframes ticker {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.animate-ticker {
+  animation: ticker 28s linear infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgb(12 163 12 / 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 8px rgb(12 163 12 / 0);
+  }
+}
+.live-dot {
+  animation: pulse-ring 1.6s ease-out infinite;
+}
+
+/* html5-qrcode injects its own video element; make it fill the frame */
+.qr-region video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+@media print {
+  body {
+    background: white;
+  }
+  body * {
+    visibility: hidden;
+  }
+  .print-area,
+  .print-area * {
+    visibility: visible;
+  }
+  .print-area {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

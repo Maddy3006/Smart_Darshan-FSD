@@ -1,0 +1,22 @@
+node_modules/
+dist/
+
+# secrets
+.env
+.env.local
+
+# local MongoDB data (npm run db)
+.data/
+
+# trained ML models are regenerated from the database
+ml-service/models/
+__pycache__/
+*.pyc
+.venv/
+
+*.log
+.DS_Store
+
+# graphify intermediates (the final graph.html / graph.json / report are kept)
+graphify-out/cache/
+graphify-out/.graphify_*

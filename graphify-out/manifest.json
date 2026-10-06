@@ -1,0 +1,382 @@
+{
+  "D:\\Madhav.G\\MERN_stack_project\\client\\vite.config.js": {
+    "mtime": 1789453266.5625021,
+    "hash": "d9cc18e75dcfba62b18c758ebf63dabf"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\App.jsx": {
+    "mtime": 1789455216.7750044,
+    "hash": "29b03405aa7e1b9a6a518d2a9337ae7c"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\main.jsx": {
+    "mtime": 1789453291.7786229,
+    "hash": "b724326abbf09bf9a919548e7976dd25"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\components\\CrowdMeter.jsx": {
+    "mtime": 1789455219.0111027,
+    "hash": "860a25ac478ccbffdcabe05617f43a85"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\components\\LiveLanes.jsx": {
+    "mtime": 1789455220.3815885,
+    "hash": "59ebf52f7e68bbf6d7a0fc6120a83245"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\components\\ProtectedRoute.jsx": {
+    "mtime": 1789453582.8313885,
+    "hash": "1fb86ab3145482f578c24788b1ed49f4"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\components\\QrScanner.jsx": {
+    "mtime": 1789455220.768577,
+    "hash": "82a34218ecca742035ebe070f5c71d6c"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\components\\StatusBadge.jsx": {
+    "mtime": 1789453427.084486,
+    "hash": "f0e56a9bbe9240c1a5c10a7c1074206a"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\components\\TempleCard.jsx": {
+    "mtime": 1789455221.0465584,
+    "hash": "fe358f67d38c61821b604d5348f4a7ba"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\components\\ui.jsx": {
+    "mtime": 1789455222.0432189,
+    "hash": "9364c9e1169d31588d0876ff1d87b583"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\components\\charts\\ChartFrame.jsx": {
+    "mtime": 1789453455.5242207,
+    "hash": "73870d2d811e2a4493989cb799ec9573"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\components\\charts\\ForecastChart.jsx": {
+    "mtime": 1789455217.7861955,
+    "hash": "fdb81e7aa8480c6a8e41df728e289146"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\components\\charts\\TrendCharts.jsx": {
+    "mtime": 1789455218.710318,
+    "hash": "f1f9b75582025326fb880e94071afb44"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\components\\layout\\ConsoleLayout.jsx": {
+    "mtime": 1789455219.7806308,
+    "hash": "1cda1bf925525c0e81ecc80816930484"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\components\\layout\\PublicLayout.jsx": {
+    "mtime": 1789455220.1564436,
+    "hash": "eb78637ec84c2fdd67c1cd2bf4b7504f"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\context\\AuthContext.jsx": {
+    "mtime": 1789462444.5130227,
+    "hash": "eb9bd57ee5083e47aa5eed05baf6a226"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\context\\SocketContext.jsx": {
+    "mtime": 1789454973.2666447,
+    "hash": "a106e2169d1a4a027277620e849a1627"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\hooks\\useFetch.js": {
+    "mtime": 1789453370.197045,
+    "hash": "a260840ef998d0f08c0dd0ca71e5ef47"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\hooks\\useLiveTemple.js": {
+    "mtime": 1789453373.7293196,
+    "hash": "12a532421f7a3d5f92011a46cd3f8710"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\lib\\api.js": {
+    "mtime": 1789462424.5292168,
+    "hash": "b5392affe851d0b7472df5b4625e5217"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\lib\\constants.js": {
+    "mtime": 1789455224.8252254,
+    "hash": "8da3a6b46cfe5c7e26d715c18ff3e5aa"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\lib\\format.js": {
+    "mtime": 1789453313.9549632,
+    "hash": "beb4513471bf19dd691fe30df8227dba"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\lib\\sound.js": {
+    "mtime": 1789453323.6244633,
+    "hash": "6ee2db614bce5f1bb4a74711e3805725"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\pages\\NotFound.jsx": {
+    "mtime": 1789455230.2552733,
+    "hash": "6cf76c69e7afa54b1434758bf39aec5d"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\pages\\admin\\Analytics.jsx": {
+    "mtime": 1789455225.4490774,
+    "hash": "99343bfc47ead862659ae84785fa3d59"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\pages\\admin\\Announcements.jsx": {
+    "mtime": 1789455225.9789844,
+    "hash": "59435772b178f0e3d5ceb190a466ff15"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\pages\\admin\\Dashboard.jsx": {
+    "mtime": 1789455226.9768858,
+    "hash": "c96bda46f6bc519921f1401035f8c48d"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\pages\\admin\\Settings.jsx": {
+    "mtime": 1789455227.3967254,
+    "hash": "008085c120d787feebf17e31379df859"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\pages\\admin\\Slots.jsx": {
+    "mtime": 1789454108.177308,
+    "hash": "84d29d9f5bf0ebbaa2eecc418b5148cd"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\pages\\admin\\StaffAccounts.jsx": {
+    "mtime": 1789454142.6054678,
+    "hash": "202101833458c0910a5bce3079629ca5"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\pages\\auth\\Login.jsx": {
+    "mtime": 1789455228.4821851,
+    "hash": "3263e16d4015509a6a5942a3012afdb7"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\pages\\auth\\Register.jsx": {
+    "mtime": 1789455228.8861065,
+    "hash": "e316989a6fe4868eb923228a48846e95"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\pages\\devotee\\BookDarshan.jsx": {
+    "mtime": 1789455229.497656,
+    "hash": "f9f89850329e27be5861520a06a0ef1a"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\pages\\devotee\\Profile.jsx": {
+    "mtime": 1789455229.9669647,
+    "hash": "2d2fe1cfa6c361704a95802e92ada02d"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\pages\\public\\DisplayBoard.jsx": {
+    "mtime": 1789455230.5559351,
+    "hash": "831ac469ab570c160509454deb4adeb7"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\pages\\public\\Home.jsx": {
+    "mtime": 1789455230.6792536,
+    "hash": "b2cfccec3d112b19a9dd256add801b87"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\pages\\public\\TempleDetail.jsx": {
+    "mtime": 1789455230.9976432,
+    "hash": "73f6bf02293298832bdce74a4a2a6ae8"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\pages\\staff\\Kiosk.jsx": {
+    "mtime": 1789455231.63054,
+    "hash": "eb20727d635953de20759ec8adf39e53"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\pages\\staff\\Scanner.jsx": {
+    "mtime": 1789455231.853766,
+    "hash": "43d12ff069e3da0391367234151ba65f"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\pages\\staff\\WalkinCounter.jsx": {
+    "mtime": 1789455232.176705,
+    "hash": "a5e1ec4668c8e80b9f48951d2e349d43"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\src\\pages\\super\\SuperTemples.jsx": {
+    "mtime": 1789455232.6530735,
+    "hash": "7e4077f1be0fc98a47506902ba30c35d"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\ml-service\\app.py": {
+    "mtime": 1789452933.5733318,
+    "hash": "59e62ee2b4123a3fe95d5ab9c578cf3e"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\ml-service\\model.py": {
+    "mtime": 1789452918.5610473,
+    "hash": "228f2b5ab779399f1cc6280fea3c78bd"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\app.js": {
+    "mtime": 1789452666.7953045,
+    "hash": "bfdf1f94f1f20ac32346f6c2187d8874"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\server.js": {
+    "mtime": 1789455236.8161416,
+    "hash": "5929ddd93a3ae0e6274d9be97c02108f"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\config\\db.js": {
+    "mtime": 1789452170.6641817,
+    "hash": "10a23a10588e911c56f55eb67b36f937"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\config\\env.js": {
+    "mtime": 1789452165.1805935,
+    "hash": "28e6717d07b3a0217762718de665b9ce"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\controllers\\adminController.js": {
+    "mtime": 1789455233.5173385,
+    "hash": "57f7e8db67b9b25a9c8238a84a97314c"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\controllers\\authController.js": {
+    "mtime": 1789452512.3412025,
+    "hash": "8d8b81cf9337097c0e292a471f9463b3"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\controllers\\smsController.js": {
+    "mtime": 1789452605.9149034,
+    "hash": "4fae54f5fd089a67e58a645a88fcdd44"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\controllers\\staffController.js": {
+    "mtime": 1789452545.5322692,
+    "hash": "a384f450bf509d2fb6257bc78f18b899"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\controllers\\superadminController.js": {
+    "mtime": 1789452591.6893153,
+    "hash": "220b8aee2d6f89a1b5b188b71034df96"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\controllers\\templeController.js": {
+    "mtime": 1789455234.1470857,
+    "hash": "833ee359da273bbe6ac571e13a2a6578"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\jobs\\index.js": {
+    "mtime": 1789455234.426504,
+    "hash": "ff21143fe3bcb7cc9ecd4e921d55f263"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\middleware\\auth.js": {
+    "mtime": 1789462419.7178142,
+    "hash": "1c5c2180e8597517e9d0d9074fbe28cf"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\middleware\\errorHandler.js": {
+    "mtime": 1789452265.0375152,
+    "hash": "83ee4d396138fcfc63fa0f5401469745"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\middleware\\templeScope.js": {
+    "mtime": 1789455234.6356826,
+    "hash": "03ad7b26d5165de97f12cb37157b8375"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\middleware\\validate.js": {
+    "mtime": 1789452259.3442233,
+    "hash": "699eb0f1eee51217732f13b557b05424"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\models\\Alert.js": {
+    "mtime": 1789452241.4409626,
+    "hash": "8003e588f5601806f17a9cc04ffe5e36"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\models\\Announcement.js": {
+    "mtime": 1789452237.946938,
+    "hash": "a05d0fe32e40d101eec800c8f2dafc94"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\models\\FootfallLog.js": {
+    "mtime": 1789452235.1086092,
+    "hash": "c6bf5a5213bf35ccc2112ba7112a917b"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\models\\Slot.js": {
+    "mtime": 1789452224.1105125,
+    "hash": "e132c1d8ca9ca13d69a24b9417f19c97"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\models\\Temple.js": {
+    "mtime": 1789454011.4710948,
+    "hash": "cec8d2a805eb0d605501cbc7c5347df6"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\models\\User.js": {
+    "mtime": 1789452202.825885,
+    "hash": "af46ba0b7f7b9ad8b3b0e179d88b3591"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\routes\\adminRoutes.js": {
+    "mtime": 1789455235.4017363,
+    "hash": "40d1d1f101ff0b6eacaccd1beb2d1962"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\routes\\authRoutes.js": {
+    "mtime": 1789455235.4836452,
+    "hash": "013a5b0c8004fbca6e6489feced713f6"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\routes\\index.js": {
+    "mtime": 1789452663.40843,
+    "hash": "a35970c8b16621cce7d48a3d5768b18f"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\routes\\schemas.js": {
+    "mtime": 1789452616.6012769,
+    "hash": "3787d3a046e68644ad5fcefe6a7fff53"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\routes\\staffRoutes.js": {
+    "mtime": 1789452635.2120347,
+    "hash": "000f1d0872b38050b4ddd5924c13a0d3"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\routes\\superadminRoutes.js": {
+    "mtime": 1789452658.7981362,
+    "hash": "177dd347db51f68e1fe5d72421006c6d"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\routes\\templeRoutes.js": {
+    "mtime": 1789452625.4639356,
+    "hash": "9e6fccd0ead60ecb74236a91b603d268"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\scripts\\localDb.js": {
+    "mtime": 1789452815.6847515,
+    "hash": "a5dfffdae02558edc6efacad8368b035"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\scripts\\seed.js": {
+    "mtime": 1789455236.1242743,
+    "hash": "5297bd3a2a1accb59fd2b04bbb598426"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\scripts\\seedData.js": {
+    "mtime": 1789455236.4237535,
+    "hash": "d6dd10d475ea4fb56ae483466e601285"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\scripts\\simulate.js": {
+    "mtime": 1789455236.5825317,
+    "hash": "8b2fbdf35e87ddce0c122e4e4b483195"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\services\\alertService.js": {
+    "mtime": 1789452381.3035486,
+    "hash": "ee47b928b691a91465becb82dd8acfc4"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\services\\bookingService.js": {
+    "mtime": 1789455237.033185,
+    "hash": "4744c528bb22da6e3992f8028c148a3e"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\services\\footfallService.js": {
+    "mtime": 1789452346.0554795,
+    "hash": "40e0cf56dded47bb32cf82c1403cd85a"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\services\\forecastService.js": {
+    "mtime": 1789462467.497435,
+    "hash": "502badd7c949009b39a883e97280103b"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\services\\liveStats.js": {
+    "mtime": 1789454885.154712,
+    "hash": "55bfa579bd49becf6718b4e974810766"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\services\\mlClient.js": {
+    "mtime": 1789452454.6048796,
+    "hash": "661c2d38005224feefd3334f5d6a1213"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\services\\notificationService.js": {
+    "mtime": 1789452320.0582082,
+    "hash": "d22f37243351cfe15356b7bb31808c74"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\services\\scanService.js": {
+    "mtime": 1789452437.385195,
+    "hash": "28732a752ad208a12f6b4f87a1183c06"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\services\\slotService.js": {
+    "mtime": 1789455237.8575096,
+    "hash": "556bbd8f64a784bf7f1640b89291de6d"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\services\\smsService.js": {
+    "mtime": 1789455237.9446838,
+    "hash": "ea95d235a355650351dfb4bbbb91ee69"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\services\\statsService.js": {
+    "mtime": 1789452496.6811614,
+    "hash": "c589acd23af1cad71c943e3d92764b3d"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\sockets\\index.js": {
+    "mtime": 1789462421.2322173,
+    "hash": "43426e17d7ff973e11d717292366b72a"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\utils\\AppError.js": {
+    "mtime": 1789452172.61997,
+    "hash": "ba0b91e8bc6524682f74df7b28d02988"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\utils\\helpers.js": {
+    "mtime": 1789455238.3996787,
+    "hash": "5da4401f2484ef074c0501950aa23c9f"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\src\\utils\\tz.js": {
+    "mtime": 1789452185.8454785,
+    "hash": "828f1e577b1fd6d2be779fe58bb8b54d"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\server\\tests\\api.test.mjs": {
+    "mtime": 1789530875.5022542,
+    "hash": "7ec8e76c7f87bc4d9433a9a78af3c457"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\README.md": {
+    "mtime": 1789455326.1567645,
+    "hash": "e39b60d8a26c243fbd65ddce13bbfa31"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\index.html": {
+    "mtime": 1789453270.5680668,
+    "hash": "8682bfe6af8172d12d5ea9c190ff21f7"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\ml-service\\requirements.txt": {
+    "mtime": 1789452927.195032,
+    "hash": "30667fc1960d04603123e4dd0915884f"
+  },
+  "D:\\Madhav.G\\MERN_stack_project\\client\\public\\favicon.svg": {
+    "mtime": 1789453274.015373,
+    "hash": "a623a8a35309bc9a6615a4faff327423"
+  }
+}
