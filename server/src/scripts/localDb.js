@@ -29,8 +29,11 @@ if (!(await isPortFree(port))) {
 fs.mkdirSync(dbPath, { recursive: true });
 console.log('[local-db] starting MongoDB (the first run downloads the MongoDB binary, please wait)...');
 
+// The library gives mongod 10 seconds to start by default. After an unclean
+// shutdown (PC switched off, terminal closed) mongod first recovers its data
+// files, and on a cold machine that can take longer, so allow a full minute.
 const mongod = await MongoMemoryServer.create({
-  instance: { port, ip: '127.0.0.1', dbPath, storageEngine: 'wiredTiger' },
+  instance: { port, ip: '127.0.0.1', dbPath, storageEngine: 'wiredTiger', launchTimeout: 60_000 },
 });
 
 console.log(`[local-db] MongoDB ready at mongodb://127.0.0.1:${port} (data folder: ${dbPath})`);
