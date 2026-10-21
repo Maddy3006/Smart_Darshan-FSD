@@ -1,0 +1,54 @@
+# Render Blueprint: deploys Smart Darshan as two web services.
+#   smart-darshan     Node.js API + Socket.IO, and it serves the built React app
+#   smart-darshan-ml  Python prediction service (Flask + scikit-learn, behind gunicorn)
+# The database is MongoDB Atlas (free M0 cluster). Step-by-step guide: DEPLOYMENT.md
+services:
+  - type: web
+    name: smart-darshan
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm ci --prefix server --omit=dev && npm ci --prefix client --include=dev && npm run build --prefix client
+    startCommand: npm start --prefix server
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: "22"
+      - key: MONGO_URI # your MongoDB Atlas connection string
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ML_SERVICE_URL # the smart-darshan-ml URL, e.g. https://smart-darshan-ml.onrender.com
+        sync: false
+      - key: ML_API_KEY
+        fromService:
+          type: web
+          name: smart-darshan-ml
+          envVarKey: ML_API_KEY
+      - key: AUTO_SEED # set to true (with DEMO_PASSWORD) to load demo data into an empty database
+        value: "false"
+      - key: DEMO_PASSWORD
+        sync: false
+      - key: TWILIO_ACCOUNT_SID # optional: real SMS
+        sync: false
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
+      - key: TWILIO_FROM_NUMBER
+        sync: false
+
+  - type: web
+    name: smart-darshan-ml
+    runtime: python
+    plan: free
+    region: singapore
+    rootDir: ml-service
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --threads 4 --timeout 120
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: ML_API_KEY
+        generateValue: true

@@ -4,7 +4,10 @@ import env from '../config/env.js';
 async function call(path, { method = 'GET', body, timeoutMs = 8000 } = {}) {
   const res = await fetch(`${env.mlServiceUrl}${path}`, {
     method,
-    headers: body ? { 'Content-Type': 'application/json' } : undefined,
+    headers: {
+      ...(body ? { 'Content-Type': 'application/json' } : {}),
+      ...(env.mlApiKey ? { 'X-Api-Key': env.mlApiKey } : {}),
+    },
     body: body ? JSON.stringify(body) : undefined,
     signal: AbortSignal.timeout(timeoutMs),
   });

@@ -1,9 +1,10 @@
 node_modules/
 dist/
 
-# secrets
+# secrets: every .env file stays on your PC; only the .env.example templates are committed
 .env
-.env.local
+.env.*
+!.env.example
 
 # local MongoDB data (npm run db)
 .data/

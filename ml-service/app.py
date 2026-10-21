@@ -6,9 +6,14 @@ Endpoints (called by the Node.js API, not the browser):
   POST /predict              {templeId, rows: [{hour, dayOfWeek, month, isFestival}]}
   GET  /models/<templeId>    metrics of a trained model
 
-Run:  python app.py   (listens on http://127.0.0.1:8000)
+Run locally:  python app.py   (listens on http://127.0.0.1:8000)
+Production:   gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --threads 4 --timeout 120
+
+When ML_API_KEY is set, every endpoint except /health requires the header
+"X-Api-Key: <ML_API_KEY>", so a publicly hosted service cannot be used by others.
 """
 
+import hmac
 import os
 from pathlib import Path
 
@@ -19,6 +24,16 @@ from model import ModelError, ModelStore
 
 app = Flask(__name__)
 store = ModelStore(Path(os.environ.get("MODELS_DIR", Path(__file__).parent / "models")))
+API_KEY = os.environ.get("ML_API_KEY", "")
+
+
+@app.before_request
+def require_api_key():
+    if not API_KEY or request.path == "/health":
+        return None
+    if not hmac.compare_digest(request.headers.get("X-Api-Key", ""), API_KEY):
+        return jsonify({"error": "Invalid or missing API key"}), 401
+    return None
 
 
 @app.errorhandler(ModelError)
@@ -64,5 +79,6 @@ def model_info(temple_id: str):
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get("ML_PORT", "8000"))
-    app.run(host="127.0.0.1", port=port, debug=False)
+    # Hosts such as Render pass the port in PORT; ML_HOST=0.0.0.0 accepts outside connections.
+    port = int(os.environ.get("PORT") or os.environ.get("ML_PORT", "8000"))
+    app.run(host=os.environ.get("ML_HOST", "127.0.0.1"), port=port, debug=False)

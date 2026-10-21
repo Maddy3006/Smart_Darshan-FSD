@@ -108,8 +108,10 @@ export async function trainModels({ onlyUntrained = false } = {}) {
     console.log('[ml] prediction service offline; forecasts will use historical averages');
     return;
   }
+  // "Untrained" also covers a service that lost its model files (e.g. a restart on a host without a disk).
+  const onService = new Set(health.trainedTemples || []);
   for (const temple of await activeTemples()) {
-    if (onlyUntrained && temple.mlModel?.trainedAt) continue;
+    if (onlyUntrained && temple.mlModel?.trainedAt && onService.has(String(temple._id))) continue;
     try {
       const model = await trainTempleModel(temple);
       console.log(`[ml] trained ${temple.name}: R2=${model.r2}, MAE=${model.mae}, samples=${model.samples}`);
@@ -122,7 +124,7 @@ export async function trainModels({ onlyUntrained = false } = {}) {
 export function startJobs() {
   cron.schedule('* * * * *', safely('tokens', tokenMaintenance));
   cron.schedule('5 * * * *', safely('slots', syncAllTemples));
-  // New temples (or a service that was offline at startup) get a model within the hour.
+  // New temples, or a service that was offline at startup or lost its models, get a model within the hour.
   cron.schedule(
     '20 * * * *',
     safely('ml-untrained', () => trainModels({ onlyUntrained: true })),

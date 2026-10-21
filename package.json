@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "description": "Smart Darshan - real-time queue and crowd management for temples (MERN + Python ML)",
+  "engines": {
+    "node": ">=20.19"
+  },
   "scripts": {
     "setup": "npm install && npm --prefix server install && npm --prefix client install && python -m pip install -r ml-service/requirements.txt",
     "dev": "concurrently -n db,api,ml,web -c gray,green,magenta,cyan \"npm run dev:db\" \"npm run dev:api\" \"npm run dev:ml\" \"npm run dev:web\"",
@@ -12,9 +15,11 @@
     "dev:web": "npm --prefix client run dev",
     "seed": "npm --prefix server run seed --",
     "backfill": "npm --prefix server run backfill --",
+    "db:copy": "npm --prefix server run db:copy --",
     "simulate": "npm --prefix server run simulate --",
     "test:api": "npm --prefix server run test:api",
-    "build": "npm --prefix client run build"
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server start"
   },
   "devDependencies": {
     "concurrently": "^10.0.5"

@@ -3,3 +3,5 @@ pandas>=2.0
 numpy>=1.24
 scikit-learn>=1.3
 joblib>=1.3
+# production server (Linux hosts); locally `python app.py` is used
+gunicorn>=22.0; platform_system != "Windows"

@@ -1,3 +1,4 @@
+import env from '../config/env.js';
 import Alert from '../models/Alert.js';
 import Announcement from '../models/Announcement.js';
 import FootfallLog from '../models/FootfallLog.js';
@@ -346,6 +347,12 @@ export async function clearDatabase() {
 export async function seedDatabase({ reset = false, allDay = false, historyDays = 90, log = console.log } = {}) {
   if (reset) await clearDatabase();
 
+  // DEMO_PASSWORD (required in production) replaces the public demo passwords for every account.
+  const passwords = env.demoPassword
+    ? Object.fromEntries(Object.keys(DEMO_PASSWORDS).map((role) => [role, env.demoPassword]))
+    : DEMO_PASSWORDS;
+  const shown = (password) => (env.demoPassword ? '(DEMO_PASSWORD)' : password);
+
   const now = new Date();
   const random = mulberry32(2026);
   const pick = (list) => list[Math.floor(random() * list.length)];
@@ -354,14 +361,14 @@ export async function seedDatabase({ reset = false, allDay = false, historyDays 
     name: 'Platform Superadmin',
     email: 'superadmin@smartdarshan.in',
     role: 'superadmin',
-    password: DEMO_PASSWORDS.superadmin,
+    password: passwords.superadmin,
   });
   const demoDevotee = await createUser({
     name: 'Demo Devotee',
     email: 'devotee@smartdarshan.in',
     phone: '+919876543210',
     role: 'devotee',
-    password: DEMO_PASSWORDS.devotee,
+    password: passwords.devotee,
   });
 
   const devotees = [];
@@ -371,14 +378,14 @@ export async function seedDatabase({ reset = false, allDay = false, historyDays 
         name: `${FIRST_NAMES[i - 1]} ${pick(LAST_NAMES)}`,
         email: `devotee${i}@example.com`,
         role: 'devotee',
-        password: DEMO_PASSWORDS.devotee,
+        password: passwords.devotee,
       }),
     );
   }
 
   const credentials = [
-    { role: 'superadmin', email: 'superadmin@smartdarshan.in', password: DEMO_PASSWORDS.superadmin, temple: 'All temples' },
-    { role: 'devotee', email: 'devotee@smartdarshan.in', password: DEMO_PASSWORDS.devotee, temple: '-' },
+    { role: 'superadmin', email: 'superadmin@smartdarshan.in', password: shown(passwords.superadmin), temple: 'All temples' },
+    { role: 'devotee', email: 'devotee@smartdarshan.in', password: shown(passwords.devotee), temple: '-' },
   ];
 
   for (const [index, def] of TEMPLES.entries()) {
@@ -406,7 +413,7 @@ export async function seedDatabase({ reset = false, allDay = false, historyDays 
       phone: `+91900000000${index + 1}`,
       role: 'admin',
       templeId: temple._id,
-      password: DEMO_PASSWORDS.admin,
+      password: passwords.admin,
     });
     const staff = await createUser({
       name: `${def.city} Gate Staff`,
@@ -414,11 +421,11 @@ export async function seedDatabase({ reset = false, allDay = false, historyDays 
       phone: `+91900000001${index + 1}`,
       role: 'staff',
       templeId: temple._id,
-      password: DEMO_PASSWORDS.staff,
+      password: passwords.staff,
     });
     credentials.push(
-      { role: 'admin', email: admin.email, password: DEMO_PASSWORDS.admin, temple: def.name },
-      { role: 'staff', email: staff.email, password: DEMO_PASSWORDS.staff, temple: def.name },
+      { role: 'admin', email: admin.email, password: shown(passwords.admin), temple: def.name },
+      { role: 'staff', email: staff.email, password: shown(passwords.staff), temple: def.name },
     );
 
     const footfall = generateFootfall(temple, def, today, localHour(now, TIMEZONE), historyDays, 1000 + index);

@@ -7,7 +7,7 @@
  * queue position, cancellation and seat release, admin stats/controls/alerts,
  * temple scoping for staff/admin/superadmin, and the inbound SMS webhook.
  */
-const API = 'http://localhost:5000/api';
+const API = process.env.API_URL || 'http://localhost:5000/api';
 let failures = 0;
 
 async function call(path, { method = 'GET', body, token, headers = {}, form } = {}) {

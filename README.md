@@ -129,7 +129,7 @@ Created by the seed script. In development the login page lists them so you can 
 | Temple admin | `admin.venkateswara@smartdarshan.in` | `Admin@123` |
 | Superadmin | `superadmin@smartdarshan.in` | `Super@123` |
 
-There are also `staff.murugan@…`, `admin.murugan@…`, `staff.mahalakshmi@…` and `admin.mahalakshmi@…` accounts for the other two temples. Change or remove these before any real deployment.
+There are also `staff.murugan@…`, `admin.murugan@…`, `staff.mahalakshmi@…` and `admin.mahalakshmi@…` accounts for the other two temples. These passwords are public, so on a deployed site change them (log in, open `/profile`) or seed with `DEMO_PASSWORD` – see [DEPLOYMENT.md](DEPLOYMENT.md).
 
 Accounts live in MongoDB and survive restarts, so you only log in again when the 7-day JWT expires. The seed generates 90 days of history ending on the day it runs — if the database has been sitting for a few weeks the charts go sparse and the upcoming bookings run out, so run `npm run backfill` to top it up without losing any accounts.
 
@@ -142,6 +142,7 @@ npm run backfill                 # top up stale demo data in place - keeps every
 npm run simulate                 # simulate a busy gate: walk-ins, entry and exit scans
 npm run simulate -- --temple=murugan --speed=3 --surge   # faster, and the queue keeps growing
 npm run build                    # production build of the React app
+npm run db:copy -- "<uri>"       # copy the local database to another MongoDB (e.g. Atlas)
 ```
 
 **Demo tip:** run `npm run simulate -- --surge`, then open the admin dashboard, the display board (`/display/sri-venkateswara-swamy-temple`) and a token status page side by side. Wait times, occupancy and alerts update live.
@@ -212,6 +213,7 @@ A devotee's position counts the people who entered the same lane before them. Af
 - Passwords are hashed with bcrypt; sessions use JWT (`Authorization: Bearer`).
 - Role-based access: `devotee`, `staff`, `admin`, `superadmin`. Staff and admins are locked to their own temple on the server (`templeScope` middleware); the temple id is never taken from the URL.
 - All request bodies are validated with zod. Login and register are rate-limited. `helmet` sets security headers.
+- The prediction service accepts requests only with the shared `ML_API_KEY` (when set), and the API refuses to start in production without `MONGO_URI` and `JWT_SECRET`.
 - The public token page masks the devotee's name and never shows the phone number. The token code acts as the secret.
 
 ---
@@ -243,9 +245,10 @@ A superadmin chooses which temple the admin and staff endpoints act on with the 
 - **Prediction service offline:** start it with `npm run dev:ml`. The Analytics page shows its status; forecasts fall back to historical averages meanwhile.
 - **Port 27017 in use:** you already have MongoDB running. `npm run dev:db` detects this and exits, and the API uses it.
 
-### Deploying (outline)
+### Deploying
 
-- **Database:** MongoDB Atlas (set `MONGO_URI`).
-- **API:** Render or Railway (WebSockets supported). Set `NODE_ENV=production`, a long random `JWT_SECRET`, `CLIENT_URL=https://your-frontend`, `ML_SERVICE_URL`, and `AUTO_SEED=false`.
-- **ML service:** Render (Python) with `gunicorn app:app`; `ML_SERVICE_URL` must point to it.
-- **Frontend:** Vercel or Netlify. Build `client/` with `VITE_API_URL=https://your-api`, and add an SPA fallback so `/temples/...` routes serve `index.html`.
+The project deploys for free on **Render** (API, website and prediction service, from `render.yaml`) with a **MongoDB Atlas** database. Step-by-step guide: **[DEPLOYMENT.md](DEPLOYMENT.md)**.
+
+```bash
+npm run db:copy -- "<atlas connection string>"   # copy the local database (accounts, temples, history) to Atlas
+```
